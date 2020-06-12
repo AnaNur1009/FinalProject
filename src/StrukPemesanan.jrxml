@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b7ce7dc-b08a-4068-8b8e-e4c46957a1a9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pesan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * from penjualan where Kode_Pesanan = $P{pesan}]]>
+	</queryString>
+	<field name="Kode_Pesanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tgl_Pemesanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_Pemesan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jenis_Kue" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_Kue" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Harga_Kue" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total_Harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Uang_Muka" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jumlah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kategori" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="145" y="11" width="276" height="56" uuid="d35d4214-a057-4c6a-9e2e-7ebc2196f8e1"/>
+				<textElement>
+					<font fontName="Agency FB" size="44" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[TOKO KUE MANIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="67" width="555" height="22" uuid="7d8b2580-052d-4ebd-8efe-180cd8ba98e8"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[*********************************************************************************************]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="321" y="0" width="100" height="35" uuid="4ebeac13-76d1-4582-ab7b-4b0056e7bfcb"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="20"/>
+				</textElement>
+				<text><![CDATA[Tanggal :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="0" width="100" height="35" uuid="0726fdcb-28ce-487e-aaa2-88a6904b3019"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tgl_Pemesanan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="233" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="134" height="20" uuid="8f1f631a-471d-4bc6-95ec-b182a008e7ab"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Kode Pesanan     :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="0" width="100" height="20" uuid="0dbef2a3-07ca-49fe-97ec-56690e847d13"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Kode_Pesanan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="23" width="134" height="20" uuid="132900f7-3f7d-4763-b7c4-22e4ec7d4735"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Nama Pemesan   :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="21" width="100" height="20" uuid="3fa172b6-bdd6-4c63-b179-bea865352dd2"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nama_Pemesan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="45" width="134" height="20" uuid="347d6f2f-a0b6-48ae-a404-7e4330bb6dd3"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Alamat                 :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="43" width="100" height="20" uuid="6b170529-47cf-481f-aab1-c68f1208cbe2"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Alamat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="68" width="134" height="20" uuid="937930c1-5cd4-468b-9ce9-a0c97330f6b0"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Nama Kue            :          ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="67" width="100" height="20" uuid="af2f1df9-50a8-4937-a691-b10bc9762de1"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nama_Kue}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="91" width="134" height="20" uuid="acce1e54-3654-483b-8b50-d7661644eecc"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Jumlah                  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="301" y="91" width="100" height="20" uuid="d8f6c7b8-33b2-4359-8c86-f53b2b063ecf"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="91" width="100" height="20" uuid="2dcedc50-b7ca-4437-b7e2-28978adb8414"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Jumlah}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="111" width="555" height="22" uuid="6fb0f1d9-734c-4494-9cec-5594787cbc9f"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[*********************************************************************************************]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="303" y="133" width="142" height="40" uuid="6d1656ee-ade9-49bd-8260-44265abac675"/>
+				<textElement>
+					<font fontName="Bell MT" size="18"/>
+				</textElement>
+				<text><![CDATA[Uang Muka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="193" width="100" height="37" uuid="eecaac41-4780-4944-8333-0bd78309c466"/>
+				<textElement>
+					<font fontName="Bell MT" size="18"/>
+				</textElement>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="445" y="133" width="110" height="40" uuid="8c5baf34-932e-4022-a33e-4624f3fe8904"/>
+				<textElement>
+					<font fontName="Bell MT" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Uang_Muka}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="193" width="110" height="37" uuid="5cd21e55-c0b3-4702-898c-f7203502ebf3"/>
+				<textElement>
+					<font fontName="Bell MT" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total_Harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="14" width="523" height="22" uuid="3426bce8-a050-4397-b53f-c7a0b7c7e25d"/>
+				<textElement>
+					<font fontName="Geometr212 BkCn BT" size="15"/>
+				</textElement>
+				<text><![CDATA[**************************** TERIMA KASIH ****************************]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
